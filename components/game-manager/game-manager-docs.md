@@ -6,32 +6,52 @@ css: game-manager.css
 
 <main>
 
+This component is the entry point of the game. It initializes everything else.
+
+
 ## Example
 
 ```html
-<game-manager></game-manager>
+<game-manager src=sample-game.json></game-manager>
 ```
 
 ```{=html}
-<game-manager></game-manager>
+<game-manager src=sample-game.json></game-manager>
 ```
 
 ## Attributes
 
-## Methods
+* `src` - the URL of a JSON file that describes the game. The JSON file should have the following structure:
 
-## Data
+<!-- TODO: update this later -->
+```json
+{
+  "rows": 10,
+  "cols": 10,
+  "player": {
+    "row": 0,
+    "col": 0
+  },
+  "enemies": [
+    {
+      "row": 1,
+      "col": 1
+    }
+  ],
+  "items": [
+    {
+      "row": 2,
+      "col": 2
+    }
+  ]
+}
+```
 
-## Events
-
-## Layouts
-
-## See also
 
 </main>
 
 <script type="module">
-import {GameManager} from './GameManager.js'
+import {GameManager} frpom './GameManager.js'
 
 window.gameManager = document.querySelector('game-manager')
 </script>
