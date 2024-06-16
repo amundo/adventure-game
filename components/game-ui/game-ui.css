@@ -1,0 +1,5 @@
+@import url('../game-controls/game-controls.css');
+
+game-ui {
+  display: block;
+}

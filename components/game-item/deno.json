@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "build": "pandoc -f markdown -t html --section-divs --css game-item-docs.css --template=template.html -o game-item-docs.html game-item-docs.md"
+  }
+}
