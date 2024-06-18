@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Components Index</title>
   <script type="module" src="./file-structure/FileStructure.js"></script>
+  <link rel="stylesheet" href="component-index.css">
 </head>
 <body>
   <file-structure>
@@ -19,5 +20,9 @@
   </file-structure>
 
   <script type="module" src="./file-structure/FileStructure.js"></script>
+  <script type="module">
+    import * as game from './component-index.js';
+    Object.assign(window, game)
+  </script>
 </body>
 </html>
