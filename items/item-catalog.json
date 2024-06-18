@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "title": "Item catalog"
+  },
+  "items": [
+    {
+      "key": "sword",
+      "label": "Sword",
+      "emoji": "🗡",
+      "features": {
+        "attack": 10,
+        "price": 100
+      },
+      "tags": [
+        "weapon",
+        "material:metal"
+      ]
+    },
+    {
+      "key": "sandwich",
+      "label": "Sandwich",
+      "emoji": "🥪",
+      "features": {
+        "health": 5,
+        "price": 5
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "sushi",
+      "label": "Sushi",
+      "emoji": "🍣",
+      "features": {
+        "health": 10,
+        "price": 10
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "shield",
+      "label": "Shield",
+      "emoji": "🛡",
+      "features": {
+        "defense": 10,
+        "price": 100
+      },
+      "tags": [
+        "armor",
+        "material:metal"
+      ]
+    },
+    {
+      "key": "bow",
+      "label": "Bow",
+      "emoji": "🏹",
+      "features": {
+        "attack": 5,
+        "price": 50
+      },
+      "tags": [
+        "weapon",
+        "material:wood"
+      ]
+    },
+    {
+      "key": "arrow",
+      "label": "Arrow",
+      "emoji": "🏹",
+      "features": {
+        "attack": 2,
+        "price": 5
+      },
+      "tags": [
+        "weapon",
+        "material:wood"
+      ]
+    },
+    {
+      "key": "axe",
+      "label": "Axe",
+      "emoji": "🪓",
+      "features": {
+        "attack": 15,
+        "price": 150
+      },
+      "tags": [
+        "weapon",
+        "material:metal"
+      ]
+    },
+    {
+      "key": "apple",
+      "label": "Apple",
+      "emoji": "🍎",
+      "features": {
+        "health": 2,
+        "price": 2
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "banana",
+      "label": "Banana",
+      "emoji": "🍌",
+      "features": {
+        "health": 3,
+        "price": 3
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "orange",
+      "label": "Orange",
+      "emoji": "🍊",
+      "features": {
+        "health": 4,
+        "price": 4
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "grape",
+      "label": "Grape",
+      "emoji": "🍇",
+      "features": {
+        "health": 1,
+        "price": 1
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "cherry",
+      "label": "Cherry",
+      "emoji": "🍒",
+      "features": {
+        "health": 1,
+        "price": 1
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "strawberry",
+      "label": "Strawberry",
+      "emoji": "🍓",
+      "features": {
+        "health": 2,
+        "price": 2
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "pear",
+      "label": "Pear",
+      "emoji": "🍐",
+      "features": {
+        "health": 3,
+        "price": 3
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "peach",
+      "label": "Peach",
+      "emoji": "🍑",
+      "features": {
+        "health": 4,
+        "price": 4
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "watermelon",
+      "label": "Watermelon",
+      "emoji": "🍉",
+      "features": {
+        "health": 5,
+        "price": 5
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "pineapple",
+      "label": "Pineapple",
+      "emoji": "🍍",
+      "features": {
+        "health": 6,
+        "price": 6
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "lemon",
+      "label": "Lemon",
+      "emoji": "🍋",
+      "features": {
+        "health": 1,
+        "price": 1
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "mango",
+      "label": "Mango",
+      "emoji": "🥭",
+      "features": {
+        "health": 7,
+        "price": 7
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "kiwi",
+      "label": "Kiwi",
+      "emoji": "🥝",
+      "features": {
+        "health": 2,
+        "price": 2
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "avocado",
+      "label": "Avocado",
+      "emoji": "🥑",
+      "features": {
+        "health": 8,
+        "price": 8
+      },
+      "tags": [
+        "food"
+      ]
+    },
+    {
+      "key": "potato",
+      "
+    {
+      "key": "health-potion",
+      "label": "Health Potion",
+      "emoji": "🧪",
+      "features": {
+        "health": 20
+      },
+      "tags": [
+        "potion"
+      ]
+    },
+    {
+      "key": "ruby",
+      "label": "Ruby",
+      "emoji": "💎",
+      "features": {
+        "price": 500,
+        "hueRotation": "240deg"
+      },
+      "tags": [
+        "treasure",
+        "gem"
+      ]
+    },
+    {
+      "key": "emerald",
+      "label": "Emerald",
+      "emoji": "💎",
+      "features": {
+        "price": 300,
+        "hueRotation": "180deg"
+      },
+      "tags": [
+        "treasure",
+        "gem"
+      ]
+    },
+    {
+      "key": "diamond",
+      "label": "Diamond",
+      "emoji": "💎",
+      "features": {
+        "price": 1000,
+        "hueRotation": "300deg"
+      },
+      "tags": [
+        "treasure",
+        "gem"
+      ]
+    },
+    {
+      "key": "amethyst",
+      "label": "Amethyst",
+      "emoji": "💎",
+      "features": {
+        "price": 50,
+        "hueRotation": "0deg"
+      },
+      "tags": [
+        "treasure",
+        "gem"
+      ]
+    },
+    {
+      "key": "topaz",
+      "label": "Topaz",
+      "emoji": "💎",
+      "features": {
+        "price": 200,
+        "hueRotation": "120deg"
+      },
+      "tags": [
+        "treasure",
+        "gem"
+      ]
+    },
+    {
+      "key": "opal",
+      "label": "Opal",
+      "emoji": "💎",
+      "features": {
+        "price": 100,
+        "hueRotation": "60deg"
+      },
+      "tags": [
+        "treasure",
+        "gem"
+      ]
+    }
+  ]
+}

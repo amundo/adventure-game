@@ -3,23 +3,16 @@
     "rows": 10,
     "columns": 10
   },
-  "player": {
-    "name": "Hero",
-    "position": { "x": 1, "y": 1 },
-    "stats": { "health": 100, "power": 50 }
-  },
   "enemies": [
     {
-      "name": "Zombie",
-      "position": { "x": 3, "y": 3 },
-      "stats": { "health": 50, "power": 20 }
+      "key": "zombie",
+      "position": { "x": 3, "y": 3 }
     }
   ],
   "items": [
     {
-      "name": "Health Potion",
-      "position": { "x": 5, "y": 5 },
-      "effect": { "health": 20 }
+      "key": "health-potion-20",
+      "position": { "x": 5, "y": 5 }
     }
   ]
 }

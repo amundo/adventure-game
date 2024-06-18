@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "title": "Enemy catalog"
+  },
+  "items": [
+    {
+      "key": "zombie",
+      "label": "Zombie",
+      "emoji": "🧟",
+      "features": {
+        "health": 100,
+        "attack": 10,
+        "defense": 5,
+        "speed": 1
+      },
+      "tags": [
+        "undead",
+        "horror"
+      ]
+    },
+    {
+      "key": "wizard",
+      "label": "Wizard",
+      "emoji": "🧙",
+      "features": {
+        "health": 50,
+        "attack": 20,
+        "defense": 2,
+        "speed": 2
+      },
+      "tags": [
+        "magic",
+        "fantasy"
+      ]
+    },
+    {
+      "key": "goblin",
+      "label": "Goblin",
+      "emoji": "👺",
+      "features": {
+        "health": 30,
+        "attack": 15,
+        "defense": 3,
+        "speed": 3
+      },
+      "tags": [
+        "fantasy"
+      ]
+    },
+    {
+      "key": "orc",
+      "label": "Orc",
+      "emoji": "👹",
+      "features": {
+        "health": 80,
+        "attack": 25,
+        "defense": 10,
+        "speed": 1
+      },
+      "tags": [
+        "fantasy"
+      ]
+    },
+    {
+      "key": "skeleton",
+      "label": "Skeleton",
+      "emoji": "💀",
+      "features": {
+        "health": 50,
+        "attack": 10,
+        "defense": 5,
+        "speed": 2
+      },
+      "tags": [
+        "undead",
+        "horror"
+      ]
+    },
+    {
+      "key": "troll",
+      "label": "Troll",
+      "emoji": "👿",
+      "features": {
+        "health": 150,
+        "attack": 30,
+        "defense": 15,
+        "speed": 1
+      },
+      "tags": [
+        "fantasy"
+      ]
+    },
+    {
+      "key": "vampire",
+      "label": "Vampire",
+      "emoji": "🧛",
+      "features": {
+        "health": 100,
+        "attack": 20,
+        "defense": 10,
+        "speed": 3
+      },
+      "tags": [
+        "undead",
+        "horror"
+      ]
+    },
+    {
+      "key": "werewolf",
+      "label": "Werewolf",
+      "emoji": "🐺",
+      "features": {
+        "health": 120,
+        "attack": 25,
+        "defense": 10,
+        "speed": 4
+      },
+      "tags": [
+        "undead",
+        "horror"
+      ]
+    },
+    {
+      "key": "witch",
+      "label": "Witch",
+      "emoji": "🧙‍♀️",
+      "features": {
+        "health": 40,
+        "attack": 15,
+        "defense": 5,
+        "speed": 2
+      },
+      "tags": [
+        "magic",
+        "fantasy"
+      ]
+    },
+    {
+      "key": "zombie-dog",
+      "label": "Zombie dog",
+      "emoji": "🐕‍🦺",
+      "features": {
+        "health": 80,
+        "attack": 15,
+        "defense": 5,
+        "speed": 3
+      },
+      "tags": [
+        "undead",
+        "horror"
+      ]
+    },
+    {
+      "key": "zombie-pig",
+      "label": "Zombie pig",
+      "emoji": "🐖",
+      "features": {
+        "health": 100,
+        "attack": 20,
+        "defense": 5,
+        "speed": 2
+      },
+      "tags": [
+        "undead",
+        "horror"
+      ]
+    }
+  ]
+}
