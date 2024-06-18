@@ -1,7 +1,20 @@
 class GameItem extends HTMLElement {
-  constructor(config) {
+  #itemData = {}
+  constructor() {
     super()
-    this.config = config
+  }
+
+  set data(itemData) {
+    this.#itemData = itemData
+    this.render()
+  }
+
+  get data() {
+    return this.#itemData
+  }
+
+  render() {
+    // @TODO: Render the item based on the item data
   }
 }
 

@@ -1,7 +1,16 @@
 class EnemyCharacter extends HTMLElement {
-  constructor(config) {
+  #enemyData = {}
+  constructor() {
     super()
-    this.config = config
+  }
+
+  set data(enemyData) {
+    this.#enemyData = enemyData
+    this.render()
+  }
+
+  get data() {
+    return this.#enemyData
   }
 }
 
