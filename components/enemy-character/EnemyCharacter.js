@@ -15,3 +15,7 @@ class EnemyCharacter extends HTMLElement {
 }
 
 customElements.define("enemy-character", EnemyCharacter)
+
+export {
+  EnemyCharacter
+}

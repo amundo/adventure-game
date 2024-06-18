@@ -1,0 +1,9 @@
+/* a set of 6 css variables that define the hue of the game item */
+:root {
+  --hue-0: 0deg;
+  --hue-1: 60deg;
+  --hue-2: 120deg;
+  --hue-3: 180deg;
+  --hue-4: 240deg;
+  --hue-5: 300deg;
+}

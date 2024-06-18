@@ -16,27 +16,20 @@ class GameCell extends HTMLElement {
     super()
   }
 
-  setPosition(row, col) {
-    this.dataset.row = row
-    this.dataset.col = col
-  }
-
   set data(cellData) {
     this.#cellData = cellData
+    
+    // @TODO: probably too much magic here
+    Object.entries(cellData)
+      .forEach(([key, value]) => {
+        this.setAttribute(key, value)
+      })
     this.render()
   }
 
-  set terrain(terrain) {
-    this.#cellData.terrain = terrain
-    this.setAttribute("terrain", terrain)
-  }
-
-  get terrain() {
-    return this.#cellData.terrain
-  }
-
   render() {
-    // @TODO: Render the cell based on the cell data
+    this.style.gridColumn = this.#cellData.x
+    this.style.gridRow = this.#cellData.y
   }
 }
 

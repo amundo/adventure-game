@@ -1,5 +1,16 @@
 class GameItem extends HTMLElement {
   #itemData = {}
+  static get observedAttributes() {
+    return ["name", "price"]
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (newValue == 'name') {
+      this.#itemData.name = newValue
+      this.render()
+    }
+  }
+
   constructor() {
     super()
   }
@@ -19,3 +30,7 @@ class GameItem extends HTMLElement {
 }
 
 customElements.define("game-item", GameItem)
+
+export {
+  GameItem
+}

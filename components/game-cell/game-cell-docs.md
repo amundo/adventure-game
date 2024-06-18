@@ -33,6 +33,8 @@ It also has a terrain, which can be land or water.
 ## Attributes
 
 * `terrain` - can be `land` or `water`
+* `x` - the x-coordinate of the cell on the game board
+* `y` - the y-coordinate of the cell on the game board
 
 ## Methods
 
@@ -46,9 +48,8 @@ A game cell’s data looks like:
 ```json
 {
   "terrain": "land",
-  "player": null,
-  "enemy": null,
-  "item": null
+  "x": 0,
+  "y": 0,
 }
 ```
 

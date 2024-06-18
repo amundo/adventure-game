@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>&lt;game-item&gt; docs</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="game-item-docs.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">&lt;game-item&gt; docs</h1>
+</header>
+<script type="module">
+import {GameItem} from './GameItem.js'
+import {DataViewer} from 'https://pathall.net/data-viewer/v2.0.0/DataViewer.js'
+window.gameItem = document.querySelector('game-item')
+</script>
+<main>
+<section id="example" class="level2">
+<h2>Example</h2>
+<p>A game item is an object that can be added to a player’s
+inventory.</p>
+<p>A game cell can contain one item.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;game-item</span> <span class="er">name</span><span class="ot">=</span><span class="st">gem</span><span class="kw">&gt;&lt;/game-item&gt;</span></span></code></pre></div>
+<game-item name=gem></game-item>
+</section>
+<section id="attributes" class="level2">
+<h2>Attributes</h2>
+</section>
+<section id="methods" class="level2">
+<h2>Methods</h2>
+</section>
+<section id="data" class="level2">
+<h2>Data</h2>
+<p>An item can have varied data associated with it, depending on the
+kind of item it is.</p>
+<p>Items are identified by the <code>key</code> field (which is
+sometimes surfaced in the <code>DOM</code> as an attribute, so we don’t
+call it <code>id</code>).</p>
+<data-viewer>
+{
+  "key": "ruby",
+  "name": "Ruby",
+  "emoji": "💎",
+  "features": {
+    "price": 500,
+    "hueRotation": "240deg"
+  },
+  "tags": [
+    "treasure",
+    "gem"
+  ]
+}
+</data-viewer>
+<p>For an catalog of items, see the <a
+href="../../items/item-catalog.json">items</a> page.</p>
+</section>
+<section id="events" class="level2">
+<h2>Events</h2>
+<p>No events yet.</p>
+</section>
+<section id="rendering" class="level2">
+<h2>Rendering</h2>
+<p>As of now we are rendering items as a simple div with the item’s
+<code>emoji</code> as the text content.</p>
+</section>
+<section id="see-also" class="level2">
+<h2>See also</h2>
+</main>
+</section>
+</body>
+</html>
