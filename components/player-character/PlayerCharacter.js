@@ -21,3 +21,7 @@ class PlayerCharacter extends HTMLElement {
 }
 
 customElements.define("player-character", PlayerCharacter)
+
+export {
+  PlayerCharacter
+}

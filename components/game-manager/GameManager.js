@@ -1,4 +1,4 @@
-import { GameUI } from "../game-ui/GameUi.js"
+import { GameUi } from "../game-ui/GameUi.js"
 import { PlayerCharacter } from "../player-character/PlayerCharacter.js"
 // import { EnemyCharacter } from "../enemy-character/EnemyCharacter.js"
 // import { GameItem } from "../game-item/GameItem.js"
