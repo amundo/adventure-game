@@ -1,3 +1,9 @@
 
 @import url(game-cell.css);
 @import url(../css/component-docs.css);
+
+
+game-cell {
+  width: 50px;
+  height: 50px;
+}

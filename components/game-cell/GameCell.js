@@ -1,6 +1,17 @@
 class GameCell extends HTMLElement {
   #cellData = {}
 
+  static get observedAttributes() {
+    return ["terrain"]
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === "terrain") {
+      this.#cellData.terrain = newValue
+      this.render()
+    }
+  }
+
   constructor() {
     super()
   }
@@ -13,6 +24,15 @@ class GameCell extends HTMLElement {
   set data(cellData) {
     this.#cellData = cellData
     this.render()
+  }
+
+  set terrain(terrain) {
+    this.#cellData.terrain = terrain
+    this.setAttribute("terrain", terrain)
+  }
+
+  get terrain() {
+    return this.#cellData.terrain
   }
 
   render() {

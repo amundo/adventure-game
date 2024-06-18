@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>&lt;game-cell&gt; docs</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="game-cell-docs.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">&lt;game-cell&gt; docs</h1>
+</header>
+<main>
+<section id="example" class="level2">
+<h2>Example</h2>
+<p>A game cell is a single square on the game board. It can contain a
+player, an enemy, or an item.</p>
+<p>It also has a terrain, which can be land or water.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;game-cell</span> <span class="er">terrain</span><span class="ot">=</span><span class="st">land</span><span class="kw">&gt;&lt;/game-cell&gt;</span></span></code></pre></div>
+<game-cell terrain=land></game-cell>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;game-cell</span> <span class="er">terrain</span><span class="ot">=</span><span class="st">water</span><span class="kw">&gt;&lt;/game-cell&gt;</span></span></code></pre></div>
+<game-cell terrain=water></game-cell>
+</section>
+<section id="attributes" class="level2">
+<h2>Attributes</h2>
+<ul>
+<li><code>terrain</code> - can be <code>land</code> or
+<code>water</code></li>
+</ul>
+</section>
+<section id="methods" class="level2">
+<h2>Methods</h2>
+<ul>
+<li><code>set data(data)</code> - sets the cell’s data and causes
+rerender</li>
+<li><code>get data()</code> - returns the cell’s data</li>
+</ul>
+</section>
+<section id="data" class="level2">
+<h2>Data</h2>
+<p>A game cell’s data looks like:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;terrain&quot;</span><span class="fu">:</span> <span class="st">&quot;land&quot;</span><span class="fu">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;player&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;enemy&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;item&quot;</span><span class="fu">:</span> <span class="kw">null</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+</section>
+<section id="events" class="level2">
+<h2>Events</h2>
+</section>
+<section id="layouts" class="level2">
+<h2>Layouts</h2>
+</section>
+<section id="see-also" class="level2">
+<h2>See also</h2>
+</main>
+<script type="module">
+import {GameCell} from './GameCell.js'
+
+window.gameCell = document.querySelector('game-cell')
+</script>
+</section>
+</body>
+</html>
