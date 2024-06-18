@@ -8,7 +8,6 @@ css: game-manager.css
 
 This component is the entry point of the game. It initializes everything else.
 
-
 ## Example
 
 ```html
@@ -21,13 +20,17 @@ This component is the entry point of the game. It initializes everything else.
 
 ## Attributes
 
-* `src` - the URL of a JSON file that describes the game. The JSON file should have the following structure:
+- `src` - the URL of a JSON file that describes the game. The JSON file should
+  have the following structure:
 
 <!-- TODO: update this later -->
+
 ```json
 {
-  "rows": 10,
-  "cols": 10,
+  "board": {
+    "rows": 10,
+    "columns": 10
+  },
   "player": {
     "row": 0,
     "col": 0
@@ -46,7 +49,6 @@ This component is the entry point of the game. It initializes everything else.
   ]
 }
 ```
-
 
 </main>
 

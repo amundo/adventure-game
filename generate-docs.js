@@ -1,17 +1,23 @@
-import { walk } from "https://deno.land/std@0.224.0/fs/walk.ts";
-import { join, relative } from "https://deno.land/std@0.224.0/path/mod.ts";
+import { walk } from "https://deno.land/std@0.224.0/fs/walk.ts"
+import { join, relative } from "https://deno.land/std@0.224.0/path/mod.ts"
 
-const componentsDir = 'components';
-const docsDir = 'docs';
-const docsFile = join(docsDir, 'index.html');
+const componentsDir = "components"
+const docsDir = "docs"
+const docsFile = join(docsDir, "index.html")
 
 async function generateDocs() {
-  const links = [];
+  const links = []
 
-  for await (const entry of walk(componentsDir, { exts: ['html'], includeFiles: true, followSymlinks: false })) {
-    if (entry.name.endsWith('-docs.html')) {
-      const relativePath = relative(docsDir, entry.path);
-      links.push(`<li><a href="${relativePath}">${entry.name}</a></li>`);
+  for await (
+    const entry of walk(componentsDir, {
+      exts: ["html"],
+      includeFiles: true,
+      followSymlinks: false,
+    })
+  ) {
+    if (entry.name.endsWith("-docs.html")) {
+      const relativePath = relative(docsDir, entry.path)
+      links.push(`<li><a href="${relativePath}">${entry.name}</a></li>`)
     }
   }
 
@@ -26,18 +32,18 @@ async function generateDocs() {
     <body>
       <h1>Component Documentation</h1>
       <ul>
-        ${links.join('\n')}
+        ${links.join("\n")}
       </ul>
     </body>
     </html>
-  `;
+  `
 
   // Ensure the docs directory exists
-  await Deno.mkdir(docsDir, { recursive: true });
+  await Deno.mkdir(docsDir, { recursive: true })
 
   // Write the HTML content to index.html in the docs directory
-  await Deno.writeTextFile(docsFile, htmlContent);
-  console.log(`Generated ${docsFile}`);
+  await Deno.writeTextFile(docsFile, htmlContent)
+  console.log(`Generated ${docsFile}`)
 }
 
-generateDocs();
+generateDocs()

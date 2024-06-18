@@ -6,7 +6,8 @@ css: game-controls.css
 
 <main>
 
-This component represents the game controls. It is responsible for the game's start, pause, and reset.
+This component represents the game controls. It is responsible for the game's
+start, pause, and reset.
 
 ## Example
 

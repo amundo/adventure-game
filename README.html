@@ -175,10 +175,11 @@ adventure games.</p>
 href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web
 Components</a>.</p>
 <h2 id="design-goals">Design Goals</h2>
-<p>I have always wanted to make a language creation game, which this
-game framework is not. But in order to make that game, I need to learn
-to make a game in this genre. I have tried various times and failed.
-Hope springs eternal. Let’s go.</p>
+<p>I have always wanted to make a language creation game, where you go
+around trying to — well, different README, because this game framework
+is only a step in that direction. I need to learn to make a game in this
+genre. I have tried various times and failed. Hope springs eternal.
+Let’s go.</p>
 <p>My design goals include:</p>
 <ul>
 <li>Make a game that is fun to play.</li>
@@ -207,5 +208,31 @@ class="uri">https://ruphus.com/island-exploration/island-exploration.html</a></p
 <p>That’s about it so far.</p>
 <p>As they say, throw the first one away. (I will probably throw this
 README away too.)</p>
+<h2 id="redesign">Redesign</h2>
+<p>Here’s my current hierarchy of components:</p>
+<ul>
+<li><code>GameManager.js</code> - the entry point of the game,
+initializes everything else.
+<ul>
+<li><code>GameUi.js</code> - this lays out the game interface as
+instructed by GameManager.
+<ul>
+<li><code>GameBoard.js</code> - the grid, generates a matrix of cells.
+<ul>
+<li><code>GameCell.js</code> - each cell in the grid.</li>
+</ul></li>
+<li><code>GameControls.js</code> - the controls that the user interacts
+with. also handles listening for key, etc events.</li>
+</ul></li>
+<li><code>EnemyCharacter.js</code> - represents an enemy, placed on the
+board by the GameManager.</li>
+<li><code>GameItem.js</code> - represents an item, placed on the board
+by the GameManager.</li>
+<li><code>PlayerCharacter.js</code> - represents the player, placed on
+the board at the beginning of the game.</li>
+</ul></li>
+</ul>
+<p>And here’s the responsive visual layout I have in mind:</p>
+<p><img src=images/responsive-layout.png alt="Layout showing desktop and mobile versions of game"></p>
 </body>
 </html>
