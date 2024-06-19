@@ -55,7 +55,7 @@ Items are identified by the `key` field (which is sometimes surfaced in the `DOM
 </data-viewer>
 ```
 
-For an catalog of items, see the [items](../../items/item-catalog.json) page.
+For a catalog of items, see the [item catalog](../../items/item-catalog.html) page.
 
 ## Events
 

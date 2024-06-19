@@ -33,6 +33,7 @@ class FileStructure extends HTMLElement {
       let jsHref = `./${snakeCase}/${componentName}`
 
       const listItem = document.createElement("li")
+      listItem.dataset.depth = depth
 
       listItem.innerHTML = `<code>&lt;${snakeCase}></code> ${description} [<a href="${htmlHref}">html</a>] [<a href="${jsHref}">js</a>]`
       if (depth > stack.length - 1) {

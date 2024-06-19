@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Terrain catalog"
+  },
+  "terrains": [
+    {
+      "key": "land",
+      "label": "Land",
+      "features": {
+        "color": "green"
+      },
+      "tags": [
+        "land"
+      ]
+    },
+    {
+      "key": "water",
+      "label": "Water",
+      "features": {
+        "color": "blue"
+      },
+      "tags": [
+        "water"
+      ]
+    }
+  ]
+}

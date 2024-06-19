@@ -6,3 +6,4 @@ export {GameControls} from "./game-controls/GameControls.js";
 export {EnemyCharacter} from "./enemy-character/EnemyCharacter.js";
 export {GameItem} from "./game-item/GameItem.js";
 export {PlayerCharacter} from "./player-character/PlayerCharacter.js";
+export {DataViewer} from "./data-viewer/DataViewer.js";
