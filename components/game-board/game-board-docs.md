@@ -1,10 +1,15 @@
 ---
 lang: en
 title:  \<game-board\> docs
-css: game-board.css
+css: game-board-docs.css
 ---
 
 <main>
+
+The game board is responsible for layout out the board: placing cells, items,
+and enemies as instructed by its parent component `<game-ui>`.
+
+@TODO: add panning and zooming.
 
 ## Example
 
@@ -18,9 +23,13 @@ css: game-board.css
 
 ## Attributes
 
+- `size` - number of rows and columns in the board. Default is 25.
+
 ## Methods
 
 ## Data
+
+Data is set to the component from its parent `<game-ui>` component.
 
 ## Events
 

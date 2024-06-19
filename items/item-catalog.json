@@ -25,7 +25,9 @@
         "price": 5
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "meal"
       ]
     },
     {
@@ -37,7 +39,9 @@
         "price": 10
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "seafood"
       ]
     },
     {
@@ -101,7 +105,9 @@
         "price": 2
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -113,7 +119,9 @@
         "price": 3
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -125,7 +133,9 @@
         "price": 4
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -137,7 +147,9 @@
         "price": 1
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -149,7 +161,9 @@
         "price": 1
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -161,7 +175,9 @@
         "price": 2
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -173,7 +189,9 @@
         "price": 3
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -185,7 +203,9 @@
         "price": 4
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -197,7 +217,9 @@
         "price": 5
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -209,7 +231,9 @@
         "price": 6
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -221,7 +245,9 @@
         "price": 1
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -233,7 +259,9 @@
         "price": 7
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -245,7 +273,9 @@
         "price": 2
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
@@ -257,12 +287,25 @@
         "price": 8
       },
       "tags": [
-        "food"
+        "food",
+        "health",
+        "fruit"
       ]
     },
     {
       "key": "potato",
-      "
+      "label": "Potato",
+      "emoji": "🥔",
+      "features": {
+        "health": 3,
+        "price": 3
+      },
+      "tags": [
+        "food",
+        "health",
+        "vegetable"
+      ]
+    },
     {
       "key": "health-potion",
       "label": "Health Potion",
@@ -350,6 +393,278 @@
       "tags": [
         "treasure",
         "gem"
+      ]
+    },
+    {
+      "key": "books",
+      "label": "Books",
+      "emoji": "📚",
+      "features": {},
+      "tags": [
+        "reading",
+        "library"
+      ]
+    },
+    {
+      "key": "open-book",
+      "label": "Open Book",
+      "emoji": "📖",
+      "features": {},
+      "tags": [
+        "reading",
+        "study"
+      ]
+    },
+    {
+      "key": "notebook",
+      "label": "Notebook",
+      "emoji": "📒",
+      "features": {},
+      "tags": [
+        "writing",
+        "notes"
+      ]
+    },
+    {
+      "key": "notebook-decorative",
+      "label": "Notebook with Decorative Cover",
+      "emoji": "📓",
+      "features": {},
+      "tags": [
+        "writing",
+        "journal"
+      ]
+    },
+    {
+      "key": "notebook-tabs",
+      "label": "Notebook with Tabs",
+      "emoji": "📔",
+      "features": {},
+      "tags": [
+        "writing",
+        "organization"
+      ]
+    },
+    {
+      "key": "closed-book",
+      "label": "Closed Book",
+      "emoji": "📕",
+      "features": {},
+      "tags": [
+        "reading"
+      ]
+    },
+    {
+      "key": "green-book",
+      "label": "Green Book",
+      "emoji": "📗",
+      "features": {},
+      "tags": [
+        "reading"
+      ]
+    },
+    {
+      "key": "blue-book",
+      "label": "Blue Book",
+      "emoji": "📘",
+      "features": {},
+      "tags": [
+        "reading"
+      ]
+    },
+    {
+      "key": "orange-book",
+      "label": "Orange Book",
+      "emoji": "📙",
+      "features": {},
+      "tags": [
+        "reading"
+      ]
+    },
+    {
+      "key": "bookmark-tabs",
+      "label": "Bookmark Tabs",
+      "emoji": "📑",
+      "features": {},
+      "tags": [
+        "organization",
+        "reading"
+      ]
+    },
+    {
+      "key": "bookmark",
+      "label": "Bookmark",
+      "emoji": "🔖",
+      "features": {},
+      "tags": [
+        "reading",
+        "marking"
+      ]
+    },
+    {
+      "key": "page-with-curl",
+      "label": "Page with Curl",
+      "emoji": "📃",
+      "features": {},
+      "tags": [
+        "document"
+      ]
+    },
+    {
+      "key": "scroll",
+      "label": "Scroll",
+      "emoji": "📜",
+      "features": {},
+      "tags": [
+        "ancient",
+        "writing"
+      ]
+    },
+    {
+      "key": "page-facing-up",
+      "label": "Page Facing Up",
+      "emoji": "📄",
+      "features": {},
+      "tags": [
+        "document"
+      ]
+    },
+    {
+      "key": "memo",
+      "label": "Memo",
+      "emoji": "📝",
+      "features": {},
+      "tags": [
+        "notes",
+        "writing"
+      ]
+    },
+    {
+      "key": "pencil",
+      "label": "Pencil",
+      "emoji": "✏️",
+      "features": {},
+      "tags": [
+        "writing",
+        "drawing"
+      ]
+    },
+    {
+      "key": "black-nib",
+      "label": "Black Nib",
+      "emoji": "✒️",
+      "features": {},
+      "tags": [
+        "writing",
+        "old-fashioned"
+      ]
+    },
+    {
+      "key": "fountain-pen",
+      "label": "Fountain Pen",
+      "emoji": "🖋️",
+      "features": {},
+      "tags": [
+        "writing",
+        "elegant"
+      ]
+    },
+    {
+      "key": "pen",
+      "label": "Pen",
+      "emoji": "🖊️",
+      "features": {},
+      "tags": [
+        "writing"
+      ]
+    },
+    {
+      "key": "paintbrush",
+      "label": "Paintbrush",
+      "emoji": "🖌️",
+      "features": {},
+      "tags": [
+        "drawing",
+        "artistic"
+      ]
+    },
+    {
+      "key": "crayon",
+      "label": "Crayon",
+      "emoji": "🖍️",
+      "features": {},
+      "tags": [
+        "drawing",
+        "colorful"
+      ]
+    },
+    {
+      "key": "spiral-notepad",
+      "label": "Spiral Notepad",
+      "emoji": "🗒️",
+      "features": {},
+      "tags": [
+        "notes",
+        "writing"
+      ]
+    },
+    {
+      "key": "spiral-calendar",
+      "label": "Spiral Calendar",
+      "emoji": "🗓️",
+      "features": {},
+      "tags": [
+        "scheduling",
+        "planning"
+      ]
+    },
+    {
+      "key": "calendar",
+      "label": "Calendar",
+      "emoji": "📅",
+      "features": {},
+      "tags": [
+        "scheduling",
+        "planning"
+      ]
+    },
+    {
+      "key": "card-index-dividers",
+      "label": "Card Index Dividers",
+      "emoji": "🗂️",
+      "features": {},
+      "tags": [
+        "organization"
+      ]
+    },
+    {
+      "key": "card-file-box",
+      "label": "Card File Box",
+      "emoji": "🗃️",
+      "features": {},
+      "tags": [
+        "storage",
+        "organization"
+      ]
+    },
+    {
+      "key": "briefcase",
+      "label": "Briefcase",
+      "emoji": "💼",
+      "features": {},
+      "tags": [
+        "document",
+        "storage"
+      ]
+    },
+    {
+      "key": "card-index",
+      "label": "Card Index",
+      "emoji": "📇",
+      "features": {},
+      "tags": [
+        "reference",
+        "organization"
       ]
     }
   ]

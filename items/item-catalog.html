@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Item Catalog</title>
+  <link rel="icon" type="image/png" href="#">
+  <link rel="stylesheet" href="../components/component-index.css">
+</head>
+<body>
+<h1>Item Catalog</h1>
+
+<p><code>JSON</code> source at <a href="./item-catalog.json">./item-catalog.json</a></p>
+
+<data-viewer></data-viewer>
+
+
+<script type="module">
+import {DataViewer} from '../components/component-index.js'
+
+try {
+  let response = await fetch("./item-catalog.json")
+  let itemCatalog = await response.json()
+  document.querySelector('data-viewer').data = itemCatalog
+} catch(error){
+  console.error(error)
+}
+
+</script>
+</body>
+</html>

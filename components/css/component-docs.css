@@ -1,0 +1,124 @@
+
+body {
+  display: grid;
+  max-width: calc(4*26ch);
+  margin:0;
+  font-family: var(--documentation-body-family);
+}
+
+:root {
+  --docling-green: hsl(120, 66.9%, 20%);
+}
+
+body > * {
+  padding: 1em;
+}
+
+figure {
+  border: 1px solid var(--gray-3);
+  border-radius: 4px;
+  padding: 2em;
+  box-shadow: -2px 2px 1px var(--gray-6);
+}
+
+body > header {
+  background-color: var(--docling-green);
+  /* background-image: url(../../images/adventure-icon.png); */
+  background-position: right center;
+  color:white;
+  aspect-ratio: 1;
+  text-shadow: -1px 1px 1px black;
+  background-size:50% 50%;
+  background-repeat: no-repeat;
+  img {
+    max-height: 100%;
+  }
+}
+
+script.visible-script {
+  white-space: pre-wrap;
+  display:block;
+  background:#333;
+  color:limegreen;
+  font-family: Fira Mono, monospace;
+  padding:1em;
+  border-radius:5px;
+}
+
+
+output {
+  display: block;
+  padding: 1em;
+  border-radius: 5px;;
+  background: #333;
+  color:lime;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+
+figure.application {
+  border: 1px solid gainsboro;
+  object-fit: contain;
+  background:#fefefe;
+  padding:1em;
+  display: flex;
+  flex-direction: column;
+  margin: 4em 0;
+}
+
+figure.application  > div {
+  box-shadow: -2px 2px 4px gainsboro;
+  border: 1px solid #ccc;
+  border-radius:4px;
+
+  padding: 1em;
+  flex: 1;
+  background:white;
+}
+figure.application  > figcaption {
+  margin:.2em;
+  line-height: 1.4;
+}
+
+h3 {
+  border-bottom: 1px solid var(--docling-green);
+}
+
+
+section#events {
+  display: grid;
+  gap: 1em;
+  grid-template:
+  "header header " auto
+  "events component " auto
+  /  1fr 1fr;
+}
+
+section#events header {
+  grid-area: header;
+}
+
+section#events div.event-list {
+  grid-area: events;
+}
+
+
+section#events figure.application {
+  grid-area: component;
+}
+
+code.event {
+  background: var(--gray-7);
+  box-shadow: -1px 1px 1px var(--gray-2);
+  border: 1px solid var(--gray-5);
+  border-radius: 4px;
+  padding:.4em;
+  font-size: .8rem;
+  font-weight:bold;
+}
+
+code.event:before {
+  content: "💬";
+  margin-right:.5em;
+}

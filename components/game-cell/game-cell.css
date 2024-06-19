@@ -5,7 +5,8 @@
 
 game-cell {
   display: grid;
-  
+  place-content: center;;
+  /* outline: 1px solid white; */
   &[terrain="land"]{
     background: var(--land-green);
   }
