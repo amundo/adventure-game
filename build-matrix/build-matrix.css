@@ -1,0 +1,62 @@
+:root {
+  --grid-width: 10; /* Default grid width */
+  --grid-height: 10; /* Default grid height */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin: 0;
+  background-color: #f0f0f0;
+  user-select: none; /* Disable text selection for the entire body */
+}
+
+.container {
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.paintbox {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  /* gap: 5px; */
+  margin-bottom: 20px;
+  grid-template-columns: repeat(var(--grid-width), 40px);
+  grid-template-rows: repeat(var(--grid-height), 40px);
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  user-select: none; /* Ensure that cells specifically do not allow text selection */
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.matrix-output {
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+}

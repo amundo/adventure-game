@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Matrix Generator</title>
+    <link rel="stylesheet" href="build-matrix.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <label for="widthInput">Width:</label>
+            <input type="number" id="widthInput" value="10" min="1">
+            <label for="heightInput">Height:</label>
+            <input type="number" id="heightInput" value="10" min="1">
+            <button id="generateGrid" class="button">Generate Grid</button>
+        </div>
+        <div id="paintbox" class="paintbox">
+            <label>
+                <input type="radio" name="current" value="0" checked>
+                <input type="text" name="character" value="0">
+            </label>
+            <label>
+                <input type="radio" name="current" value="1">
+                <input type="text" name="character" value="1">
+            </label>
+            <label>
+                <input type="radio" name="current" value="L">
+                <input type="text" name="character" value="L">
+            </label>
+            <label>
+                <input type="radio" name="current" value="W">
+                <input type="text" name="character" value="W">
+            </label>
+            <label>
+                <input type="radio" name="current" value="@">
+                <input type="text" name="character" value="@">
+            </label>
+        </div>
+        <div id="grid" class="grid"></div>
+        <button id="generateMatrix" class="button">Generate Matrix</button>
+        <textarea id="matrixOutput" class="matrix-output" readonly></textarea>
+    </div>
+    <script src="build-matrix.js"></script>
+</body>
+</html>
