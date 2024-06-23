@@ -7,3 +7,15 @@
 @import url("./game-item/game-item.css");
 @import url("./player-character/player-character.css");
 @import url("./data-viewer/data-viewer.css");
+
+
+strong.component-name {
+  background: #333;
+  color:whitesmoke;
+  font-family: monospace;
+  font-size: 1.5rem;
+  padding: .25rem;
+  margin: .1rem;
+  border-radius: 5px;
+  display: inline-block;
+}

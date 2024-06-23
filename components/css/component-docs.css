@@ -21,6 +21,10 @@ figure {
   box-shadow: -2px 2px 1px var(--gray-6);
 }
 
+img, svg {
+  max-width: 100%;
+}
+
 body > header {
   background-color: var(--primary-color);
   /* background-image: url(../../images/adventure-icon.png); */

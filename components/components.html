@@ -4,49 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=<li>0">
   <title>Components Index</title>
-  <script type="module" src="./file-structure/FileStructure.js"></script>
   <link rel="stylesheet" href="component-index.css">
 </head>
-<ol>
 
-<h2>Utility components</h2>
-
-<ol>
-  <li><code>&lt;data-viewer></code> - displays generic data.component-index.css</li>
-</ol >
-
-
+<header>
+  <h1>Adventure game framework</h1>
+</header>
 
 <h2>Game components</h2>
 
 <ol>
-
-<li> <code>&lt;game-manager></code> - Entry point of the game, initializes everything else.</li>
-<li> <code>&lt;game-ui></code> - Listens for user actions and relates them to the map.</li>
-<li> <code>&lt;game-map></code> - The map of the world. Loads and renders map data where instructed by GameUi.</li>
-<li> <code>&lt;game-controls></code> - The controls that the user interacts with. Handles listening for key events, mouse events, etc events.</li>
-<li> <code>&lt;game-cell></code> - Each cell in the map. Has an x, y property which places it in the grid. Tracks what is on it and terrain type.</li>
-<li> <code>&lt;enemy-character></code> - represents an enemy, placed on the board by the GameManager.</li>
-<li> <code>&lt;player-character></code> - represents the player, placed on the board at the beginning of the game.</li>
-<li> <code>&lt;game-item></code> - Represents an item, placed on the board by the GameManager.</li>
+<li> <code>&lt;game-manager></code> <span class=description>Entry point of the game, initializes everything else.</span></li>
+<li> <code>&lt;game-ui></code> <span class=description>Listens for user actions and relates them to the map.</span></li>
+<li> <code>&lt;game-map></code> <span class=description>The map of the world. Loads and renders map data where instructed by GameUi.</span></li>
+<li> <code>&lt;manage-map></code> <span class=description>Handles file and metadata operations for a game map.</span></li>
+<li> <code>&lt;game-controls></code> <span class=description>The controls that the user interacts with. Handles listening for key events, mouse events, etc events.</span></li>
+<li> <code>&lt;game-cell></code> <span class=description>Each cell in the map. Has an x, y property which places it in the grid. Tracks what is on it and terrain type.</span></li>
+<li> <code>&lt;enemy-character></code> <span class=description>represents an enemy, placed on the board by the GameManager.</span></li>
+<li> <code>&lt;player-character></code> <span class=description>represents the player, placed on the board at the beginning of the game.</span></li>
+<li> <code>&lt;game-item></code> <span class=description>Represents an item, placed on the board by the GameManager.</span></li>
 </ol>
 
  
+
+
+<h2>Utility components</h2>
+
+<ol>
+  <li><code>&lt;data-viewer></code> <span class=description>displays generic data.</span></li>
+</ol >
+
+
 <script type="module">
 
 let snakeToCamel = snake => snake.split`-`.map((word, i) => i ? word[0].toUpperCase() + word.slice(1) : word).join``
-Array.from(document.querySelectorAll('code'))
-  .filter(code => {
-    let newCode = document.createElement('code')
-    let name = code.textContent.slice(1, -1)
-    let jsName = snakeToCamel(name) + '.js'
-    let htmlName = name + '.html'
-    let a = document.createElement('a')
-    a.href = `./${name}/${htmlName}`
-    a.innerHTML = `<code><a href="${name}/${htmlName}">${name}</a></code> ` //[<a href="${name}/${jsName}.js">${jsName}</a>]`
-    newCode.append(a)
-    code.replaceWith(newCode)
-  })
+// Array.from(document.querySelectorAll('code'))
+//   .filter(code => {
+//     let newCode = document.createElement('code')
+//     let name = code.textContent.slice(1, -1)
+//     let jsName = snakeToCamel(name) + '.js'
+//     let htmlName = name + '.html'
+//     let docsName = name + `-docs.html`
+//     let span = document.createElement('span')
+//     span.href = `./${name}/${htmlName}`
+//     span.innerHTML = `<code>[<a href="${name}/${docsName}">docs</a>]</code>` 
+    
+//     newCode.append(span)
+//     code.replaceWith(newCode)
+//     newCode.parentElement.insertAdjacentHTML("afterbegin", `[<a href="${name}/${docsName}">demo</a>] [<a href="${name}/${jsName}">source</a>]`)
+//   })
+
+
+document.querySelectorAll('li').forEach(li => {
+  const code = li.querySelector('code')
+
+  const name = code.textContent.slice(1, -1)
+  const jsName = snakeToCamel(name) + '.js'
+  const htmlName = name + '.html'
+  const docsName = name + '-docs.html'
+
+  code.innerHTML = `
+    [<a href="${name}/${docsName}">demo</a>]
+    [<a href="${name}/${jsName}">source</a>]
+    <code>[<a href="${name}/${docsName}">docs</a>]</code>
+    <strong class=component-name>&lt;${name}></strong>
+  `
+})
 </script>
 </body>
 </html>
