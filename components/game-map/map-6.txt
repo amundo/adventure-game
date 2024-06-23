@@ -1,0 +1,17 @@
+sLbLWzLLzL
+WWWWWzLLzL
+LzzLLzzLLz
+WWWWWWWWWW
+WWWWWWWWWW
+WWWWWWWWWW
+WWWL@LWWWW
+WW@@L@LWWW
+WWL@@L@WWW
+WW@@L@LWWW
+
+s - spawn
+L - land
+W - water
+z - zombie
+@ - gem
+b - boat

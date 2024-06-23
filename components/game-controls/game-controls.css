@@ -1,4 +1,25 @@
 
 game-controls {
   display: block;
+  nav {
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    [data-direction=up]{
+      grid-column: 2;
+      grid-row: 1;
+    }
+    [data-direction=down]{
+      grid-column: 2;
+      grid-row: 3;
+    }
+    [data-direction=left]{
+      grid-column: 1;
+      grid-row: 2;
+    }
+    [data-direction=right]{
+      grid-column: 3;
+      grid-row: 2;
+    }
+  }
 }

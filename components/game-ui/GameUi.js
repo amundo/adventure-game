@@ -1,5 +1,6 @@
-import { GameBoard } from "../game-board/GameBoard.js"
+import { GameMap } from "../game-map/GameMap.js"
 import { GameControls } from "../game-controls/GameControls.js"
+import { PlayerCharacter } from "../player-character/PlayerCharacter.js"
 
 class GameUi extends HTMLElement {
   #uiData = {}
@@ -7,10 +8,10 @@ class GameUi extends HTMLElement {
   constructor() {
     super()
     this.innerHTML = `
+      <game-map></game-map>
       <game-controls></game-controls>
-      <game-board></game-board>
     `
-    this.gameBoard = this.querySelector("game-board")
+    this.gameBoard = this.querySelector("game-map")
     this.gameControls = this.querySelector("game-controls")
   }
 

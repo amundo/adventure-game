@@ -9,12 +9,15 @@
 </head>
 <body>
 
-    <game-manager></game-manager>  
+    <game-manager src="../../sample-game.json"></game-manager>  
 
 <script type="module">
 import {GameManager} from './GameManager.js'
+import {PlayerCharacter} from '../player-character/PlayerCharacter.js'
 
-window.GameManager = document.querySelector('game-manager')
+window.gameManager = document.querySelector('game-manager')
+window.player = new PlayerCharacter()
+gameManager.player = player
 </script>
 
 </body>

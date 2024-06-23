@@ -1,9 +1,11 @@
 class PlayerCharacter extends HTMLElement {
-  #playerData = {}
-  constructor(config) {
+  #playerData = {
+    emoji: "😀",
+  }
+
+  constructor() {
     super()
-    this.config = config
-    this.attachEvents()
+    this.render()
   }
 
   set data(playerData) {
@@ -15,8 +17,32 @@ class PlayerCharacter extends HTMLElement {
     return this.#playerData
   }
 
-  attachEvents() {
-    // Attach events specific to player character
+  set position({x, y}) {
+    this.x = x
+    this.y = y
+    this.style.gridColumn = this.x + 1
+    this.style.gridRow = this.y + 1
+  }
+
+  get position(){
+    return {
+      x: this.x,
+      y: this.y,
+      gridColumn: this.x + 1,
+      gridRow: this.y + 1
+    }
+  }
+
+  move({x,y}){
+    this.position = {x,y}
+  }
+
+  listen() {
+    
+  }
+
+  render(){
+    this.innerHTML = this.#playerData.emoji 
   }
 }
 

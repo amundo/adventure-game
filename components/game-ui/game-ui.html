@@ -12,9 +12,33 @@
     <game-ui></game-ui>  
 
 <script type="module">
+import {GameMap} from '../game-map/GameMap.js'
+import {GameCell} from '../game-cell/GameCell.js'
+import {PlayerCharacter} from '../player-character/PlayerCharacter.js'
+import {choice} from '../../modules/random.js'
+
 import {GameUi} from './GameUi.js'
 
-window.GameUi = document.querySelector('game-ui')
+window.gameUi = document.querySelector('game-ui')
+
+// await customElements.whenDefined('player-character')
+let player = new PlayerCharacter()
+// let randomCell = choice(randomIsland)
+// let randomIsland = choice(gameUi.gameBoard.islands)
+await customElements.whenDefined('game-map')
+
+addEventListener('DOMContentLoaded', () => {
+  console.log(gameUi.gameBoard.randomIsland)
+
+  // let randomCell = choice(randomIsland.cells)
+  // player.position = randomCell
+  // gameUi.gameBoard.append(player)
+})
+
+
+
+Object.assign(window, { player , choice })
+    
 </script>
 
 </body>

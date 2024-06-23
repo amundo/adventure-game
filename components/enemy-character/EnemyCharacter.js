@@ -12,6 +12,10 @@ class EnemyCharacter extends HTMLElement {
   get data() {
     return this.#enemyData
   }
+
+  render() {
+    this.innerHTML = this.#enemyData.emoji
+  }
 }
 
 customElements.define("enemy-character", EnemyCharacter)

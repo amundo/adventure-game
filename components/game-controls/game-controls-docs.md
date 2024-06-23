@@ -9,6 +9,10 @@ css: game-controls.css
 This component represents the game controls. It is responsible for the game's
 start, pause, and reset.
 
+It is also the location where document-level keyboard events are handled.
+
+There are also controls here that work on mobile, in the form of buttons.
+
 ## Example
 
 ```html

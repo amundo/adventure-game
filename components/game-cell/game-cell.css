@@ -13,5 +13,9 @@ game-cell {
 
   &[terrain="water"]{
     background: var(--water-blue);
+    background-size: contain;
+    background-size: 100px;
+
+
   }
 }

@@ -32,6 +32,10 @@ class GameCell extends HTMLElement {
     this.render()
   }
 
+  get data(){
+    return this.#cellData
+  }
+
   get terrain(){
     return this.#cellData.terrain
   }
@@ -42,20 +46,12 @@ class GameCell extends HTMLElement {
     this.render()
   }
 
-  set gridColumn(gridColumn){
-    this.#cellData.gridColumn = gridColumn
-  }
-
-  set gridRow(gridRow){
-    this.#cellData.gridRow = gridRow
-  }
-
   get gridColumn(){
-    return this.#cellData.gridColumn
+    return this.#cellData.gridColumn + 1
   }
 
   get gridRow(){
-    return this.#cellData.gridRow
+    return this.#cellData.y + 1
   }
 
   get x(){
@@ -71,12 +67,8 @@ class GameCell extends HTMLElement {
   }
   
   render() {
-    let {gridColumn, gridRow} = this.#cellData
-
-    this.style.gridColumn = gridColumn
-    this.style.gridRow = gridRow
-
-    // this.innerHTML = `<small>${gridRow}<br>${gridColumn}</small>`
+    this.style.gridColumn = this.gridColumn
+    this.style.gridRow = this.gridRow
   }
 }
 

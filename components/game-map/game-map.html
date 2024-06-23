@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>  
+  <title>&lt;game-map></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="game-map.css">
+
+</head>
+<body>
+
+    <game-map></game-map>  
+
+<script type="module">
+import {GameMap} from './GameMap.js'
+import {GameCell} from '../game-cell/GameCell.js'
+import {findIslands} from './find-islands.js'
+import {PlayerCharacter} from '../player-character/PlayerCharacter.js'
+import {choice} from '../../modules/random.js'
+
+const gameMap = document.querySelector('game-map')
+
+let randomIsland = choice(gameMap.islands)
+
+let randomCell = choice(randomIsland)// @TODO: should be randomIsland.cells, instance of class
+    
+let player = new PlayerCharacter()
+player.position = randomCell
+gameMap.append(player)
+
+Object.assign(window, { player, choice, randomIsland, gameMap, findIslands})
+    
+  </script>
+
+</body>
+</html>

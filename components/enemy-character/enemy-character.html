@@ -5,17 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="enemy-character.css">
-
 </head>
 <body>
 
-    <enemy-character></enemy-character>  
-
 <script type="module">
 import {EnemyCharacter} from './EnemyCharacter.js'
+let response = await fetch('../../enemies/enemy-catalog.json')
+let {enemies, metadata} = await response.json()
 
-window.EnemyCharacter = document.querySelector('enemy-character')
+class RandomEnemy extends EnemyCharacter {
+  connectedCallback() {
+    this.data = enemies[Math.floor(Math.random() * enemies.length)]
+    this.render()
+  }
+}
+customElements.define('random-enemy', RandomEnemy)
+
+Array.from({length:10000})
+  .fill(0)
+  .map(_ => document.body.append(document.createElement('random-enemy')))
+
 </script>
-
 </body>
 </html>

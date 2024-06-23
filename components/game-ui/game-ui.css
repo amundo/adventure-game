@@ -1,5 +1,8 @@
 @import url('../game-controls/game-controls.css');
+@import url('../game-map/game-map.css');
 
 game-ui {
-  display: block;
+  background-color: lemonchiffon;;
+  display: grid;
+  row-gap: 1em;;
 }

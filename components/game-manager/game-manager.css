@@ -1,4 +1,13 @@
+@import url('../game-map/game-map.css');
+@import url('../game-controls/game-controls.css');
+@import url('../message-log/message-log.css');
 
 game-manager {
   display: block;
+  game-map {
+    background-color: lemonchiffon;
+  }
+  game-controls {
+    background-color: orangered;
+  }
 }

@@ -6,14 +6,16 @@ css: enemy-character.css
 
 <main>
 
+The `enemy-character` component is a custom element that represents an enemy character in a game. It is a simple component that displays a character as an emoji, and can optionally display health and other stats.
+
 ## Example
 
 ```html
-<enemy-character></enemy-character>
+<enemy-character key="zombie"></enemy-character>
 ```
 
 ```{=html}
-<enemy-character></enemy-character>
+<enemy-character key="zombie"></enemy-character>
 ```
 
 ## Attributes
