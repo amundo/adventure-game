@@ -74,7 +74,7 @@ class GameManager extends HTMLElement {
 
   startGame() {
     // Add player to the game board
-    this.gameUi.gameBoard.place(this.playerCharacter, this.gameUi.gameBoard.randomIsland)
+    // this.gameUi.gameBoard.place(this.playerCharacter, this.gameUi.gameBoard.randomIsland)
     // Add enemies to the game board
     // this.enemies.forEach((enemy) => this.gameUi.gameBoard.addCharacter(enemy))
     // Add items to the game board

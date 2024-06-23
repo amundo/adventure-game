@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <game-map></game-map>  
+    <game-map src="map-1.json"></game-map>  
 
 <script type="module">
 import {GameMap} from './GameMap.js'
@@ -20,15 +20,15 @@ import {choice} from '../../modules/random.js'
 
 const gameMap = document.querySelector('game-map')
 
-let randomIsland = choice(gameMap.islands)
+// let randomIsland = choice(gameMap.islands)
 
-let randomCell = choice(randomIsland)// @TODO: should be randomIsland.cells, instance of class
+// let randomCell = choice(randomIsland)// @TODO: should be randomIsland.cells, instance of class
     
 let player = new PlayerCharacter()
-player.position = randomCell
-gameMap.append(player)
+// player.position = randomCell
+// gameMap.append(player)
 
-Object.assign(window, { player, choice, randomIsland, gameMap, findIslands})
+Object.assign(window, { player, choice, gameMap, findIslands})
     
   </script>
 

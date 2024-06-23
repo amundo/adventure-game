@@ -6,6 +6,7 @@
 }
 
 game-map {
+  background: light-gray;
   display: grid;
   width: calc(var(--cell-count) * var(--cell-size));
   height: calc(var(--cell-count) * var(--cell-size));

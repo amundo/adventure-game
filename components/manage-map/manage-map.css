@@ -1,0 +1,26 @@
+
+
+manage-map {
+  display: flex;
+  background:hsl(128.4, 71.1%, 82.4%);
+  padding:1em;
+  gap: 1em;
+  justify-content: space-between;
+  justify-items: center;
+  div {
+    flex:1;
+    border:1px dotted blue;
+    padding:1em;
+  }
+  button {
+    align-self: center;
+    padding:1em;
+    background-color: hsl(48.8, 100%, 80%);
+    border: 2px solid hsl(255, 66.7%, 55.3%);
+    border-radius: 12px;
+    &:hover {
+      background-color: hsl(48.8, 100%, 70%);
+      cursor: pointer;
+    }
+  }
+}

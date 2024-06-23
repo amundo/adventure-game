@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "build": "pandoc -f markdown -t html --section-divs --css manage-map-docs.css --template=template.html -o manage-map-docs.html manage-map-docs.md"
+  }
+}

@@ -19,20 +19,15 @@
 player, an enemy, or an item.</p>
 <p>It also has a terrain, which can be land or water.</p>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;game-cell</span> <span class="er">terrain</span><span class="ot">=</span><span class="st">land</span><span class="kw">&gt;&lt;/game-cell&gt;</span></span></code></pre></div>
-<game-cell terrain=land></game-cell>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;game-cell</span> <span class="er">terrain</span><span class="ot">=</span><span class="st">water</span><span class="kw">&gt;&lt;/game-cell&gt;</span></span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;game-cell</span> <span class="er">terrain</span><span class="ot">=</span><span class="st">water</span><span class="kw">&gt;&lt;/game-cell&gt;</span></span></code></pre></div>
 <game-cell terrain=water></game-cell>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;game-cell</span> <span class="er">terrain</span><span class="ot">=</span><span class="st">land</span><span class="er">&lt;</span><span class="st">/game-cell</span><span class="kw">&gt;</span></span></code></pre></div>
+<game-cell terrain=land></game-cell>
 </section>
 <section id="attributes" class="level2">
 <h2>Attributes</h2>
-<ul>
-<li><code>terrain</code> - can be <code>land</code> or
-<code>water</code></li>
-<li><code>x</code> - the x-coordinate of the cell on the game board</li>
-<li><code>y</code> - the y-coordinate of the cell on the game board</li>
-</ul>
+<p>No attributes.</p>
 </section>
 <section id="methods" class="level2">
 <h2>Methods</h2>
@@ -40,10 +35,6 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="
 <li><code>set data(data)</code> - sets the cell’s data and causes
 rerender</li>
 <li><code>get data()</code> - returns the cell’s data</li>
-<li><code>set x(x)</code> - sets the cell’s x-coordinate</li>
-<li><code>get x()</code> - returns the cell’s x-coordinate</li>
-<li><code>set y(y)</code> - sets the cell’s y-coordinate</li>
-<li><code>get y()</code> - returns the cell’s y-coordinate</li>
 </ul>
 </section>
 <section id="data" class="level2">
@@ -52,18 +43,38 @@ rerender</li>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;terrain&quot;</span><span class="fu">:</span> <span class="st">&quot;land&quot;</span><span class="fu">,</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;player&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;enemy&quot;</span><span class="fu">:</span> <span class="kw">null</span><span class="fu">,</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;item&quot;</span><span class="fu">:</span> <span class="kw">null</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;x&quot;</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;y&quot;</span><span class="fu">:</span> <span class="dv">0</span><span class="fu">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>It is usually set dynamically by the parent component,
+<code>&lt;game-map&gt;</code>:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;example-div&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">module</span><span class="kw">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {GameCell} <span class="im">from</span> <span class="st">&#39;./GameCell.js&#39;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> gameCell <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">&#39;game-cell&#39;</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;#example-div&#39;</span>)<span class="op">.</span><span class="fu">append</span>(gameCell)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>gameCell<span class="op">.</span><span class="at">data</span> <span class="op">=</span> {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;terrain&quot;</span><span class="op">:</span> <span class="st">&quot;land&quot;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<div id="example-div"></div>
+<script type=module>
+import {GameCell} from './GameCell.js'
+let gameCell = document.createElement('game-cell')
+document.querySelector('#example-div').append(gameCell)
+gameCell.data = {
+  "terrain": "land"
+}
+</script>
 </section>
 <section id="events" class="level2">
 <h2>Events</h2>
-<p>No events.</p>
+<p>No events yet.</p>
 </section>
 <section id="layouts" class="level2">
 <h2>Layouts</h2>
-<p>No layouts.</p>
+<p>No layouts yet.</p>
 </section>
 <section id="see-also" class="level2">
 <h2>See also</h2>

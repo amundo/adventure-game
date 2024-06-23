@@ -13,28 +13,26 @@ A game cell is a single square on the game board. It can contain a player, an en
 It also has a terrain, which can be land or water. 
 
 ```html
-<game-cell terrain=land></game-cell>
+<game-cell terrain=water></game-cell>
 ```
 
 ```{=html}
-<game-cell terrain=land></game-cell>
+<game-cell terrain=water></game-cell>
 ```
 
 
 ```html
-<game-cell terrain=water></game-cell>
+<game-cell terrain=land</game-cell>
 ```
 
 ```{=html}
-<game-cell terrain=water></game-cell>
+<game-cell terrain=land></game-cell>
 ```
 
 
 ## Attributes
 
-* `terrain` - can be `land` or `water`
-* `x` - the x-coordinate of the cell on the game board
-* `y` - the y-coordinate of the cell on the game board
+No attributes. 
 
 ## Methods
 
@@ -53,13 +51,39 @@ A game cell’s data looks like:
 }
 ```
 
+It is usually set dynamically by the parent component, `<game-map>`:
+
+```html
+<div id="example-div"></div>
+<script type=module>
+import {GameCell} from './GameCell.js'
+let gameCell = document.createElement('game-cell')
+document.querySelector('#example-div').append(gameCell)
+gameCell.data = {
+  "terrain": "land"
+}
+</script>
+```
+
+```{=html}
+<div id="example-div"></div>
+<script type=module>
+import {GameCell} from './GameCell.js'
+let gameCell = document.createElement('game-cell')
+document.querySelector('#example-div').append(gameCell)
+gameCell.data = {
+  "terrain": "land"
+}
+</script>
+```
+
 ## Events
 
-No events.
+No events yet.
 
 ## Layouts
 
-No layouts.
+No layouts yet. 
 
 ## See also
 

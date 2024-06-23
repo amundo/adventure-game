@@ -2,6 +2,10 @@
 @import url(game-map.css);
 @import url(../css/component-docs.css);
 
+game-map {
+  border: 2px dotted gray;
+}
+
 small {
   font-size: 8px;;
 }

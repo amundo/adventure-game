@@ -4,33 +4,29 @@ import {parseMap} from './parse-map.js'  // @TODO this should probably be in an 
 import { findIslands } from "./find-islands.js"
 
 class GameMap extends HTMLElement {
-  #mapData = { size: 25 }
+  #mapData = {}
 
   constructor() {
     super()
   }
 
-  async connectedCallback() {
-    await this.loadRandomMap()
+  static get observedAttributes() {
+    return ["src"]
   }
 
-  async loadRandomMap(){
-    const mapFileNames = Array.from({length:5}).map((_,i) => `map-${i+1}.txt`)
-    let randomMapFileName = choice(mapFileNames)
-
-    let randomMapUrl = new URL(`../game-map/${randomMapFileName}`, import.meta.url).href
-    
-    let response = await fetch(randomMapUrl)
-    let text = await response.text()
-    let map = parseMap(text)
-
-    this.data = {
-      metadata: {
-        name: 'Random Map',
-        description: 'A randomly generated map'
-      }, 
-      map
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === "src" && oldValue !== newValue) {
+      this.fetch(newValue)
     }
+  }
+
+  async fetch(url) {
+    let response = await fetch(url)
+    let {metadata, terrainCells} = await response.json()
+    this.data = {metadata, terrainCells}
+  }
+
+  async connectedCallback() {
   }
 
   set data(mapData) {
@@ -43,45 +39,17 @@ class GameMap extends HTMLElement {
   }
 
   get randomIsland(){
-    console.log(`looking for random island…`)
-    console.log(`this.islands: ${this.islands}`)
     return choice(this.islands)
   }
 
   render() {
-    this.innerHTML = "" // Clear previous content
-    this.renderMap()
-  }
+    this.innerHTML = ""
 
-  renderMap() {
-    const size = this.#mapData.map.length
-
-    const totalCells = size * size
-
-    for (let i = 0; i < totalCells; i++) {
-      const x = i % size
-      const y = Math.floor(i / size)
-
-      let terrain
-      if (this.#mapData.map) {
-        terrain = this.#mapData.map[y][x] === 0 ? "water" : "land"
-      }
-      const cellData = {
-        gridColumn: x + 1,
-        gridRow: y + 1,
-        x,
-        y,
-        terrain,
-      }
-
+    this.#mapData.terrainCells.forEach(terrainCell => {
       const gameCell = document.createElement("game-cell")
-      gameCell.data = cellData
+      gameCell.data = terrainCell
       this.append(gameCell)
-    }
-
-    // this.islands = findIslands(this.data.map)
-    //   .map(islandCells => islandCells.map(({ x:y, y:x }) => this.at({ x, y })))
-    //   console.log(`finding ${this.islands.length} islands`)
+    })
   }
 
   at({ x, y }) {

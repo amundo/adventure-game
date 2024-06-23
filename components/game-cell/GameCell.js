@@ -1,8 +1,5 @@
 class GameCell extends HTMLElement {
   #cellData = {
-    gridColumn: 0,
-    gridRow: 0,
-    terrain: "water"
   }
 
   static get observedAttributes() {
@@ -20,15 +17,10 @@ class GameCell extends HTMLElement {
   }
 
   set data(cellData) {
-
+    this.style.gridColumn = cellData.x + 1
+    this.style.gridRow = cellData.y + 1
+    this.setAttribute('terrain', cellData.terrain)
     this.#cellData = cellData
-    
-    // @TODO: probably too much magic here
-    Object.entries(cellData)
-      .forEach(([key, value]) => {
-        this.setAttribute(key, value)
-      })
-      
     this.render()
   }
 
@@ -36,39 +28,25 @@ class GameCell extends HTMLElement {
     return this.#cellData
   }
 
-  get terrain(){
-    return this.#cellData.terrain
-  }
+  // get terrain(){
+  //   return this.#cellData.terrain
+  // }
 
-  set terrain(terrain){
-    this.#cellData.terrain = terrain
-    this.setAttribute("terrain", terrain)
-    this.render()
-  }
-
-  get gridColumn(){
-    return this.#cellData.gridColumn + 1
-  }
-
-  get gridRow(){
-    return this.#cellData.y + 1
-  }
-
-  get x(){
-    return this.#cellData.x
-  }
-
-  get y(){
-    return this.#cellData.y
-  }
+  // set terrain(terrain){
+  //   this.#cellData.terrain = terrain
+  //   this.setAttribute("terrain", terrain)
+  //   this.render()
+  // }
 
   get neighbors(){
     return this.parentElement.neighborsOf(this, true)
   }
   
   render() {
-    this.style.gridColumn = this.gridColumn
-    this.style.gridRow = this.gridRow
+    console.log(this.#cellData)
+    this.setAttribute('terrain', this.#cellData.terrain)
+    // this.style.gridColumn = this.gridColumn
+    // this.style.gridRow = this.gridRow
   }
 }
 
