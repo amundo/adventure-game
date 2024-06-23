@@ -7,7 +7,7 @@ body {
 }
 
 :root {
-  --docling-green: hsl(120, 66.9%, 20%);
+  --primary-color: rebeccapurple;
 }
 
 body > * {
@@ -22,11 +22,10 @@ figure {
 }
 
 body > header {
-  background-color: var(--docling-green);
+  background-color: var(--primary-color);
   /* background-image: url(../../images/adventure-icon.png); */
   background-position: right center;
   color:white;
-  aspect-ratio: 1;
   text-shadow: -1px 1px 1px black;
   background-size:50% 50%;
   background-repeat: no-repeat;
@@ -82,7 +81,7 @@ figure.application  > figcaption {
 }
 
 h3 {
-  border-bottom: 1px solid var(--docling-green);
+  border-bottom: 1px solid var(--primary-color);
 }
 
 

@@ -1,6 +1,6 @@
 @import url("./game-manager/game-manager.css");
 @import url("./game-ui/game-ui.css");
-@import url("./game-board/game-board.css");
+@import url("./game-map/game-map.css");
 @import url("./game-cell/game-cell.css");
 @import url("./game-controls/game-controls.css");
 @import url("./enemy-character/enemy-character.css");

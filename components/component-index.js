@@ -1,6 +1,6 @@
 export {GameManager} from "./game-manager/GameManager.js";
 export {GameUi} from "./game-ui/GameUi.js";
-export {GameBoard} from "./game-board/GameBoard.js";
+export {GameMap} from "./game-map/GameMap.js";
 export {GameCell} from "./game-cell/GameCell.js";
 export {GameControls} from "./game-controls/GameControls.js";
 export {EnemyCharacter} from "./enemy-character/EnemyCharacter.js";
