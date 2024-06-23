@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Enemy catalog"
   },
-  "items": [
+  "enemies": [
     {
       "key": "zombie",
       "label": "Zombie",
@@ -16,6 +16,98 @@
       "tags": [
         "undead",
         "horror"
+      ]
+    },   {
+      "key": "cyclops",
+      "label": "Cyclops",
+      "emoji": "👁️",
+      "features": {
+        "health": 220,
+        "attack": 25,
+        "defense": 18,
+        "speed": 2
+      },
+      "tags": [
+        "mythical",
+        "strength",
+        "giant"
+      ]
+    }, {
+      "key": "eagle",
+      "label": "Eagle",
+      "emoji": "🦅",
+      "features": {
+        "health": 180,
+        "attack": 20,
+        "defense": 15,
+        "speed": 7
+      },
+      "tags": [
+        "mythical",
+        "beast",
+        "flight"
+      ]
+    },   {
+      "key": "serpent",
+      "label": "Serpent",
+      "emoji": "🐍",
+      "features": {
+        "health": 280,
+        "attack": 25,
+        "defense": 20,
+        "speed": 3
+      },
+      "tags": [
+        "mythical",
+        "beast",
+        "multi-headed"
+      ]
+    }, {
+      "key": "kraken",
+      "label": "Kraken",
+      "emoji": "🦑",
+      "features": {
+        "health": 300,
+        "attack": 28,
+        "defense": 20,
+        "speed": 3
+      },
+      "tags": [
+        "mythical",
+        "water",
+        "giant"
+      ]
+    },
+    {
+      "key": "dragon",
+      "label": "Dragon",
+      "emoji": "🐉",
+      "features": {
+        "health": 300,
+        "attack": 30,
+        "defense": 20,
+        "speed": 6
+      },
+      "tags": [
+        "beast",
+        "fire",
+        "mythical"
+      ]
+    },
+    {
+      "key": "ghost",
+      "label": "Ghost",
+      "emoji": "👻",
+      "features": {
+        "health": 80,
+        "attack": 12,
+        "defense": 3,
+        "speed": 7
+      },
+      "tags": [
+        "undead",
+        "horror",
+        "spirit"
       ]
     },
     {

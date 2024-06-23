@@ -6,25 +6,51 @@
   <title>Item Catalog</title>
   <link rel="icon" type="image/png" href="#">
   <link rel="stylesheet" href="../components/component-index.css">
+  <style>
+    td[data-header="emoji"]{ font-size: 4rem;}
+    td[data-header="key"]{ font-family: monospace;}
+  </style>
 </head>
 <body>
 <h1>Item Catalog</h1>
 
 <p><code>JSON</code> source at <a href="./item-catalog.json">./item-catalog.json</a></p>
 
+<nav></nav>
 <data-viewer></data-viewer>
 
 
 <script type="module">
 import {DataViewer} from '../components/component-index.js'
 
-try {
-  let response = await fetch("./item-catalog.json")
-  let itemCatalog = await response.json()
-  document.querySelector('data-viewer').data = itemCatalog
-} catch(error){
-  console.error(error)
+// fetch item-cataalog.json and get the .items array
+let response = await fetch('./item-catalog.json')
+let {items} = await response.json()
+
+let sortBy = feature => {
+  return (a, b) => {
+    if(!a.features[feature] && !b.features[feature]){
+      return 0
+    }
+    return b.features[feature] - a.features[feature]  
+  } 
 }
+
+let features = Object.keys(items[0].features)
+
+features.forEach(feature => {
+  let button = document.createElement('button')
+  button.dataset.sortKey = feature
+  button.textContent = feature
+  button.onclick = e => {
+    let key = e.target.dataset.sortKey
+    items.sort(sortBy(key))
+    document.querySelector('data-viewer').data = items
+  }
+  document.querySelector('nav').append(button)
+})
+
+document.querySelector('data-viewer').data = items
 
 </script>
 </body>

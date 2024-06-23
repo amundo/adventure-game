@@ -4,9 +4,8 @@
   },
   "items": [
     {
-      "key": "sword",
-      "label": "Sword",
       "emoji": "🗡",
+      "label": "Sword",
       "features": {
         "attack": 10,
         "price": 100
@@ -14,7 +13,8 @@
       "tags": [
         "weapon",
         "material:metal"
-      ]
+      ],
+      "key": "sword"
     },
     {
       "key": "sandwich",
@@ -58,43 +58,18 @@
       ]
     },
     {
-      "key": "bow",
-      "label": "Bow",
-      "emoji": "🏹",
-      "features": {
-        "attack": 5,
-        "price": 50
-      },
-      "tags": [
-        "weapon",
-        "material:wood"
-      ]
-    },
-    {
-      "key": "arrow",
-      "label": "Arrow",
-      "emoji": "🏹",
-      "features": {
-        "attack": 2,
-        "price": 5
-      },
-      "tags": [
-        "weapon",
-        "material:wood"
-      ]
-    },
-    {
-      "key": "axe",
-      "label": "Axe",
       "emoji": "🪓",
+      "label": "Axe",
       "features": {
-        "attack": 15,
-        "price": 150
+        "attack": 14,
+        "price": 140
       },
       "tags": [
         "weapon",
+        "material:wood",
         "material:metal"
-      ]
+      ],
+      "key": "axe"
     },
     {
       "key": "apple",
@@ -311,7 +286,8 @@
       "label": "Health Potion",
       "emoji": "🧪",
       "features": {
-        "health": 20
+        "health": 20,
+        "price": 20
       },
       "tags": [
         "potion"
@@ -399,7 +375,9 @@
       "key": "books",
       "label": "Books",
       "emoji": "📚",
-      "features": {},
+      "features": {
+        "price": 15
+      },
       "tags": [
         "reading",
         "library"
@@ -409,7 +387,9 @@
       "key": "open-book",
       "label": "Open Book",
       "emoji": "📖",
-      "features": {},
+      "features": {
+        "price": 15
+      },
       "tags": [
         "reading",
         "study"
@@ -419,7 +399,9 @@
       "key": "notebook",
       "label": "Notebook",
       "emoji": "📒",
-      "features": {},
+      "features": {
+        "price": 5
+      },
       "tags": [
         "writing",
         "notes"
@@ -429,7 +411,9 @@
       "key": "notebook-decorative",
       "label": "Notebook with Decorative Cover",
       "emoji": "📓",
-      "features": {},
+      "features": {
+        "price": 7
+      },
       "tags": [
         "writing",
         "journal"
@@ -439,7 +423,9 @@
       "key": "notebook-tabs",
       "label": "Notebook with Tabs",
       "emoji": "📔",
-      "features": {},
+      "features": {
+        "price": 6
+      },
       "tags": [
         "writing",
         "organization"
@@ -449,7 +435,9 @@
       "key": "closed-book",
       "label": "Closed Book",
       "emoji": "📕",
-      "features": {},
+      "features": {
+        "price": 15
+      },
       "tags": [
         "reading"
       ]
@@ -458,7 +446,9 @@
       "key": "green-book",
       "label": "Green Book",
       "emoji": "📗",
-      "features": {},
+      "features": {
+        "price": 15
+      },
       "tags": [
         "reading"
       ]
@@ -467,7 +457,9 @@
       "key": "blue-book",
       "label": "Blue Book",
       "emoji": "📘",
-      "features": {},
+      "features": {
+        "price": 15
+      },
       "tags": [
         "reading"
       ]
@@ -476,7 +468,9 @@
       "key": "orange-book",
       "label": "Orange Book",
       "emoji": "📙",
-      "features": {},
+      "features": {
+        "price": 15
+      },
       "tags": [
         "reading"
       ]
@@ -485,7 +479,9 @@
       "key": "bookmark-tabs",
       "label": "Bookmark Tabs",
       "emoji": "📑",
-      "features": {},
+      "features": {
+        "price": 3
+      },
       "tags": [
         "organization",
         "reading"
@@ -495,7 +491,9 @@
       "key": "bookmark",
       "label": "Bookmark",
       "emoji": "🔖",
-      "features": {},
+      "features": {
+        "price": 2
+      },
       "tags": [
         "reading",
         "marking"
@@ -505,7 +503,9 @@
       "key": "page-with-curl",
       "label": "Page with Curl",
       "emoji": "📃",
-      "features": {},
+      "features": {
+        "price": 5
+      },
       "tags": [
         "document"
       ]
@@ -514,7 +514,9 @@
       "key": "scroll",
       "label": "Scroll",
       "emoji": "📜",
-      "features": {},
+      "features": {
+        "price": 20
+      },
       "tags": [
         "ancient",
         "writing"
@@ -524,7 +526,9 @@
       "key": "page-facing-up",
       "label": "Page Facing Up",
       "emoji": "📄",
-      "features": {},
+      "features": {
+        "price": 5
+      },
       "tags": [
         "document"
       ]
@@ -533,7 +537,9 @@
       "key": "memo",
       "label": "Memo",
       "emoji": "📝",
-      "features": {},
+      "features": {
+        "price": 3
+      },
       "tags": [
         "notes",
         "writing"
@@ -543,27 +549,21 @@
       "key": "pencil",
       "label": "Pencil",
       "emoji": "✏️",
-      "features": {},
+      "features": {
+        "price": 2
+      },
       "tags": [
         "writing",
         "drawing"
       ]
     },
     {
-      "key": "black-nib",
-      "label": "Black Nib",
-      "emoji": "✒️",
-      "features": {},
-      "tags": [
-        "writing",
-        "old-fashioned"
-      ]
-    },
-    {
       "key": "fountain-pen",
       "label": "Fountain Pen",
       "emoji": "🖋️",
-      "features": {},
+      "features": {
+        "price": 10
+      },
       "tags": [
         "writing",
         "elegant"
@@ -573,7 +573,9 @@
       "key": "pen",
       "label": "Pen",
       "emoji": "🖊️",
-      "features": {},
+      "features": {
+        "price": 3
+      },
       "tags": [
         "writing"
       ]
@@ -582,7 +584,9 @@
       "key": "paintbrush",
       "label": "Paintbrush",
       "emoji": "🖌️",
-      "features": {},
+      "features": {
+        "price": 4
+      },
       "tags": [
         "drawing",
         "artistic"
@@ -592,7 +596,9 @@
       "key": "crayon",
       "label": "Crayon",
       "emoji": "🖍️",
-      "features": {},
+      "features": {
+        "price": 1
+      },
       "tags": [
         "drawing",
         "colorful"
@@ -602,37 +608,21 @@
       "key": "spiral-notepad",
       "label": "Spiral Notepad",
       "emoji": "🗒️",
-      "features": {},
+      "features": {
+        "price": 5
+      },
       "tags": [
         "notes",
         "writing"
       ]
     },
     {
-      "key": "spiral-calendar",
-      "label": "Spiral Calendar",
-      "emoji": "🗓️",
-      "features": {},
-      "tags": [
-        "scheduling",
-        "planning"
-      ]
-    },
-    {
-      "key": "calendar",
-      "label": "Calendar",
-      "emoji": "📅",
-      "features": {},
-      "tags": [
-        "scheduling",
-        "planning"
-      ]
-    },
-    {
       "key": "card-index-dividers",
       "label": "Card Index Dividers",
       "emoji": "🗂️",
-      "features": {},
+      "features": {
+        "price": 4
+      },
       "tags": [
         "organization"
       ]
@@ -641,7 +631,9 @@
       "key": "card-file-box",
       "label": "Card File Box",
       "emoji": "🗃️",
-      "features": {},
+      "features": {
+        "price": 10
+      },
       "tags": [
         "storage",
         "organization"
@@ -651,7 +643,9 @@
       "key": "briefcase",
       "label": "Briefcase",
       "emoji": "💼",
-      "features": {},
+      "features": {
+        "price": 50
+      },
       "tags": [
         "document",
         "storage"
@@ -661,11 +655,117 @@
       "key": "card-index",
       "label": "Card Index",
       "emoji": "📇",
-      "features": {},
+      "features": {
+        "price": 5
+      },
       "tags": [
         "reference",
         "organization"
       ]
+    },
+    {
+      "emoji": "🗡️",
+      "label": "Dagger",
+      "features": {
+        "attack": 8,
+        "price": 80
+      },
+      "tags": [
+        "weapon",
+        "material:metal"
+      ],
+      "key": "dagger"
+    },
+    {
+      "emoji": "⚔️",
+      "label": "Crossed Swords",
+      "features": {
+        "attack": 15,
+        "price": 150
+      },
+      "tags": [
+        "weapon",
+        "material:metal"
+      ],
+      "key": "crossed_swords"
+    },
+    {
+      "emoji": "🏹",
+      "label": "Bow and Arrow",
+      "features": {
+        "attack": 12,
+        "price": 120
+      },
+      "tags": [
+        "weapon",
+        "material:wood"
+      ],
+      "key": "bow_and_arrow"
+    },
+    {
+      "emoji": "🔪",
+      "label": "Kitchen Knife",
+      "features": {
+        "attack": 6,
+        "price": 60
+      },
+      "tags": [
+        "weapon",
+        "material:metal"
+      ],
+      "key": "kitchen_knife"
+    },
+    {
+      "emoji": "🪃",
+      "label": "Boomerang",
+      "features": {
+        "attack": 9,
+        "price": 90
+      },
+      "tags": [
+        "weapon",
+        "material:wood"
+      ],
+      "key": "boomerang"
+    },
+    {
+      "emoji": "🪚",
+      "label": "Saw",
+      "features": {
+        "attack": 7,
+        "price": 70
+      },
+      "tags": [
+        "weapon",
+        "material:metal"
+      ],
+      "key": "saw"
+    },
+    {
+      "emoji": "🧨",
+      "label": "Firecracker",
+      "features": {
+        "attack": 13,
+        "price": 130
+      },
+      "tags": [
+        "weapon",
+        "material:explosive"
+      ],
+      "key": "firecracker"
+    },
+    {
+      "emoji": "💣",
+      "label": "Bomb",
+      "features": {
+        "attack": 20,
+        "price": 200
+      },
+      "tags": [
+        "weapon",
+        "material:explosive"
+      ],
+      "key": "bomb"
     }
   ]
 }

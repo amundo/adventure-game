@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Enemy Catalog</title>
+  <link rel="icon" type="image/png" href="#">
+  <link rel="stylesheet" href="../components/component-index.css">
+  <style>
+    td[data-header="emoji"] { font-size:3rem; }
+  </style>
+</head>
+<body>
+<h1>Enemy Catalog</h1>
+
+<p><code>JSON</code> source at <a href="./enemy-catalog.json">./enemy-catalog.json</a></p>
+
+<nav>
+</nav>
+
+<data-viewer></data-viewer>
+
+
+<script type="module">
+import {DataViewer} from '../components/component-index.js'
+
+// fetch enemy-cataalog.json and get the .enemies array
+let response = await fetch('./enemy-catalog.json')
+let {enemies} = await response.json()
+
+let sortBy = feature => {
+  return (a, b) => b.features[feature] - a.features[feature]  
+}
+
+let features = Object.keys(enemies[0].features)
+
+features.forEach(feature => {
+  let button = document.createElement('button')
+  button.dataset.sortKey = feature
+  button.textContent = feature
+  button.onclick = e => {
+    let key = e.target.dataset.sortKey
+    enemies.sort(sortBy(key))
+    document.querySelector('data-viewer').data = enemies
+  }
+  document.querySelector('nav').append(button)
+})
+
+document.querySelector('data-viewer').data = enemies
+</script>
+</body>
+</html>
