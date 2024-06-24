@@ -20,14 +20,46 @@ A game item is an object that can be added to a player’s inventory.
 A game cell can contain one item.
 
 ```html
-<game-item key=ruby></game-item>
+<game-item></game-item>
+<script type=module>
+document.querySelector('game-item').data =     {
+      "key": "ruby",
+      "label": "Ruby",
+      "emoji": "💎",
+      "features": {
+        "price": 500,
+        "hueRotation": "240deg"
+      },
+      "tags": [
+        "treasure",
+        "gem"
+      ]
+    }
+</script>
 ```
 
 ```{=html}
-<game-item key=ruby></game-item>
+<game-item id=sample-game-item></game-item>
+<script type=module>
+document.querySelector('game-item#sample-game-item').data =     {
+      "key": "ruby",
+      "label": "Ruby",
+      "emoji": "💎",
+      "features": {
+        "price": 500,
+        "hueRotation": "240deg"
+      },
+      "tags": [
+        "treasure",
+        "gem"
+      ]
+    }
+</script>
 ```
 
 ## Attributes
+
+* `key` (option) - The unique identifier for the item within the item catalog.
 
 ## Methods
 

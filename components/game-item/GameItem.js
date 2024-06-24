@@ -1,15 +1,5 @@
 class GameItem extends HTMLElement {
   #itemData = {}
-  static get observedAttributes() {
-    return ["name", "price"]
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (newValue == 'name') {
-      this.#itemData.name = newValue
-      this.render()
-    }
-  }
 
   constructor() {
     super()
@@ -20,12 +10,29 @@ class GameItem extends HTMLElement {
     this.render()
   }
 
+
+  set position({x, y}) {
+    this.x = x
+    this.y = y
+    this.style.gridColumn = this.x + 1
+    this.style.gridRow = this.y + 1
+  }
+
+  get position(){
+    return {
+      x: this.x,
+      y: this.y,
+      gridColumn: this.x + 1,
+      gridRow: this.y + 1
+    }
+  }
+
   get data() {
     return this.#itemData
   }
 
   render() {
-    // @TODO: Render the item based on the item data
+    this.innerHTML = this.#itemData.emoji 
   }
 }
 

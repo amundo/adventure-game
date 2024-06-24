@@ -24,11 +24,45 @@ window.gameItem = document.querySelector('game-item')
 inventory.</p>
 <p>A game cell can contain one item.</p>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;game-item</span> <span class="er">key</span><span class="ot">=</span><span class="st">ruby</span><span class="kw">&gt;&lt;/game-item&gt;</span></span></code></pre></div>
-<game-item key=ruby></game-item>
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;game-item&gt;&lt;/game-item&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">module</span><span class="kw">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;game-item&#39;</span>)<span class="op">.</span><span class="at">data</span> <span class="op">=</span>     {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;key&quot;</span><span class="op">:</span> <span class="st">&quot;ruby&quot;</span><span class="op">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;label&quot;</span><span class="op">:</span> <span class="st">&quot;Ruby&quot;</span><span class="op">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;emoji&quot;</span><span class="op">:</span> <span class="st">&quot;💎&quot;</span><span class="op">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;features&quot;</span><span class="op">:</span> {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;price&quot;</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;hueRotation&quot;</span><span class="op">:</span> <span class="st">&quot;240deg&quot;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;tags&quot;</span><span class="op">:</span> [</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;treasure&quot;</span><span class="op">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;gem&quot;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      ]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<game-item id=sample-game-item></game-item>
+<script type=module>
+document.querySelector('game-item#sample-game-item').data =     {
+      "key": "ruby",
+      "label": "Ruby",
+      "emoji": "💎",
+      "features": {
+        "price": 500,
+        "hueRotation": "240deg"
+      },
+      "tags": [
+        "treasure",
+        "gem"
+      ]
+    }
+</script>
 </section>
 <section id="attributes" class="level2">
 <h2>Attributes</h2>
+<ul>
+<li><code>key</code> (option) - The unique identifier for the item
+within the item catalog.</li>
+</ul>
 </section>
 <section id="methods" class="level2">
 <h2>Methods</h2>
